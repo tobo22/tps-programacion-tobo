@@ -101,31 +101,32 @@ int insertar(int num[4]){
 
 ///
 int c(int num[4]){
-
-	int i = 0;
 	
-	while(i < 4){
-		
+	int aux[4] = {0, 0, 0, 0};
+	int a = 0;
+	int cont = 0;
+
+	
+	for(int i = 0; i < 4; i++){
+	
 	if(num[i] == 0){
-	
-	cout<<"el juan "<<i+1<<" es igual a cero, sera eliminado"<<endl;
-	
-	for(i; i > 0; i++) {
 		
-	num[i]=num[i];
+	cont++;	
 	
 	}
 	
-	}
-
-	i++;
-	
-	}
-	
-	for(int i=0; i < 3; i++){
+	else {
 		
-	cout<<num[i]<<endl;
+	aux[a]=num[i];
+	a=a+1;
 	
+	}
+	
+	}
+	
+	for(int i=0; i < 4-cont; i++){
+		
+	cout<<aux[i]<<endl;
 	}
 	
 }
